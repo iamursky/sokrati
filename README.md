@@ -1,65 +1,84 @@
-# Сократи — навык Claude для редактирования русского делового текста в инфостиле по книге «Пиши, сокращай»
+# Sokrati — a Claude skill for editing business writing in plain, reader-first style
 
-![Хаотичные серые линии текста падают в оранжевую воронку и выходят из неё аккуратными, ровными оранжевыми прямоугольниками, превращаясь из беспорядка в структурированный текст](/.github/images/cover.webp)
+[![skills.sh](https://skills.sh/b/iamursky/sokrati)](https://skills.sh/iamursky/sokrati)
 
-Вдохновлён идеями книги **[«Пиши, сокращай 2025»](https://sokratil.ru/)** Максима Ильяхова и Людмилы Сарычевой.
+![Chaotic gray lines of text fall into an orange funnel and emerge as neat, even orange rectangles, turning clutter into structured text](/.github/images/cover.webp)
 
-## Что делает
+Inspired by **[«Пиши, сокращай 2025»](https://sokratil.ru/)** ("Write, Shorten 2025") by Maxim Ilyahov and Lyudmila Sarycheva — a Russian-language classic on business writing that maps well onto plain-writing traditions in other languages.
 
-Дайте Claude любой деловой текст на русском — письмо, лендинг, описание компании, пресс-релиз, резюме, отчёт, презентацию или холодное письмо — и он отредактирует его по пяти уровням:
+## What it does
 
-1. **Чистка на уровне слов** — удаляет стоп-слова, неопределённое, заумь, навязанные оценки и штампы
-2. **Ясность на уровне предложений** — переписывает отглагольные в глаголы, разбивает перегруженные предложения, наводит порядок в абзацах
-3. **Борьба с канцеляритом** — применяет шесть приёмов (сначала суть, полезный заголовок, деятельная забота и др.)
-4. **Структура и цель** — проверяет полезное действие, определённость аудитории, структуру текста, введение и заключение
-5. **Жанровые правила** — применяет шаблоны и проверки для описаний компаний, резюме, холодных писем, пресс-релизов, рабочих документов, презентаций и лендингов
+Hand Claude any piece of business writing — an email, a landing page, an "about" page, a press release, a resume, a report, a deck, a cold email — and the skill edits it across five levels:
 
-Навык возвращает отредактированную версию со списком изменений и рекомендациями, что автору стоит добавить (факты, примеры, исследования).
+1. **Word-level cleanup** — removes filler phrases, vague wording, inflated vocabulary, empty judgments, and clichés
+2. **Sentence-level clarity** — turns nominalizations into verbs, breaks up overloaded sentences, tightens paragraph discipline
+3. **Fighting bureaucratese** — six moves against the stilted style of corporate and government documents
+4. **Structure and purpose** — checks the useful action, audience, structure, intro, and conclusion
+5. **Genre rules** — templates and checks for "about" pages, resumes, cold emails, press releases, work documents, slides, and landing pages
 
-## Установка
+The skill returns an edited version with a change log and recommendations for what the author should add (facts, examples, research).
+
+## Language versions
+
+Each language has its own adapted version — native filler phrases, native clichés, native examples — not a translation.
+
+| Language  | Skill name | Folder                                |
+| --------- | ---------- | ------------------------------------- |
+| Русский   | `sokrati`  | [skills/sokrati/](skills/sokrati/)    |
+| English   | `shorten`  | [skills/shorten/](skills/shorten/)    |
+| Català    | `escurca`  | [skills/escurca/](skills/escurca/)    |
+| Deutsch   | `kuerzen`  | [skills/kuerzen/](skills/kuerzen/)    |
+| Español   | `abrevia`  | [skills/abrevia/](skills/abrevia/)    |
+| Français  | `abrege`   | [skills/abrege/](skills/abrege/)      |
+| Italiano  | `abbrevia` | [skills/abbrevia/](skills/abbrevia/)  |
+
+Each folder has its own `README.md`, `SKILL.md`, and `references/KNOWLEDGE.md`.
+
+## Installation
+
+### Via `npx skills` (recommended)
+
+```bash
+# One skill (replace shorten with your target language's skill name)
+npx skills add iamursky/sokrati/tree/main/skills/shorten
+
+# All seven languages at once
+npx skills add iamursky/sokrati
+```
 
 ### Claude Desktop / Web
 
-1. Скачайте `SKILL.md`
-2. Перейдите в **Customize → Skills → + → Upload a skill**
-3. Загрузите `SKILL.md`
-4. Навык активируется автоматически — попросите Claude убрать "воду" из текста или сделать его "сильнее"
+1. Download the `SKILL.md` from the folder of your target language
+2. Go to **Customize → Skills → + → Upload a skill**
+3. Upload `SKILL.md`
+4. The skill activates automatically when you ask Claude to clean up, tighten, or improve business writing in that language
 
-### Claude Code
+### Manual install for Claude Code
 
 ```bash
-# Персональный (доступен во всех проектах)
-git clone https://github.com/iamursky/sokrati ~/.claude/skills/sokrati
+# Personal (any language, example: English)
+git clone https://github.com/iamursky/sokrati ~/sokrati
+ln -s ~/sokrati/skills/shorten ~/.claude/skills/shorten
 
-# Для проекта (доступен коллегам через git)
-git clone https://github.com/iamursky/sokrati .claude/skills/sokrati
+# Per-project (shared via git)
+git clone https://github.com/iamursky/sokrati .sokrati
+ln -s .sokrati/skills/shorten .claude/skills/shorten
 ```
 
-## Использование
+Each language ships as a separate skill — you can install several side by side without conflict, since each has its own name in the frontmatter.
 
-Навык срабатывает автоматически, когда вы:
+## How it activates
 
-- Просите отредактировать, проверить или улучшить любой деловой текст на русском
-- Упоминаете «инфостиль», «Ильяхов», «Главред», «стоп-слова» или «канцелярит»
-- Просите убрать «воду» из текста или сделать его «сильнее»
-- Просите переписать что-то на «человеческий язык»
+The skill triggers automatically when you:
 
-### Примеры
+- Ask Claude to edit, review, clean up, or improve any business text
+- Mention "information style", "infostyle", "Ilyahov", "Glavred", "filler words", or "bureaucratese" (or the local equivalents)
+- Ask Claude to cut the fluff, kill the clichés, or rewrite in "plain language"
 
-**Полное редактирование:**
+## Authorship
 
-> Отредактируй этот текст для лендинга в инфостиле: [текст]
+The skill is inspired by **«Пиши, сокращай 2025»** by Maxim Ilyahov and Lyudmila Sarycheva. It is not an official product of the book's authors and does not reproduce the original text. The ideas and techniques belong to the authors; this skill is one interpretation of those ideas as algorithms for Claude. If you read Russian and like the book, support the authors by buying it at the link above.
 
-**Обзор без переписывания:**
+## License
 
-> Дай обратную связь по этому письму. Что можно улучшить? [текст]
-
-**Вопрос о приёмах:**
-
-> Как написать раздел «О компании» по инфостилю?
-
-Навык работает и с английским текстом, если вы явно просите применить подход Ильяхова.
-
-## Авторство
-
-Навык вдохновлён книгой **«Пиши, сокращай 2025»** Максима Ильяхова и Людмилы Сарычевой, не является официальным продуктом авторов книги и не претендует на воспроизведение оригинального текста. Идеи и приёмы принадлежат авторам книги, а реализация навыка — это моя интерпретация этих идей в виде алгоритмов для Claude. Если вам нравится книга, поддержите авторов, купив её по ссылке выше!
+See [license](license).

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Slavic",
+      "description": "Russian — the original version of the skill, built around Maxim Ilyahov's «Пиши, сокращай» (Write, Shorten).",
+      "skills": [
+        "sokrati"
+      ]
+    },
+    {
+      "title": "Germanic",
+      "description": "English and German adaptations — with native filler words, idioms, and a focus on bureaucratese (Behördendeutsch, Nominalstil, Denglisch).",
+      "skills": [
+        "shorten",
+        "kuerzen"
+      ]
+    },
+    {
+      "title": "Romance",
+      "description": "Catalan, Spanish, French, and Italian adaptations — with native clichés, lenguaje administrativo, langue de bois, burocratese, and language-specific traps like pronoms febles and cadenas de \"de\".",
+      "skills": [
+        "escurca",
+        "abrevia",
+        "abrege",
+        "abbrevia"
+      ]
+    }
+  ]
+}
