@@ -1,4 +1,4 @@
-# Abrevia — una habilidad de Claude para editar textos profesionales en español con un estilo claro y centrado en el lector
+# Abrevia: una habilidad para editar textos profesionales en español con un estilo claro y centrado en el lector
 
 ![Líneas grises y caóticas de texto caen en un embudo naranja y salen como rectángulos naranjas ordenados y uniformes, transformando el desorden en un texto estructurado](/.github/images/cover.webp)
 
@@ -8,7 +8,7 @@ Inspirada en **[«Пиши, сокращай 2025»](https://sokratil.ru/)** («
 
 ## Qué hace
 
-Pásale a Claude cualquier texto profesional en español — un correo, una página de aterrizaje, una página «Quiénes somos», una nota de prensa, un currículum, una carta de presentación, un informe, una presentación o un correo en frío — y lo edita en cinco niveles:
+Pásale a Claude, ChatGPT o Codex un texto profesional en español, como un correo, una página de aterrizaje, una nota de prensa, un currículum, un informe, una presentación o un correo en frío. La habilidad lo edita en cinco niveles:
 
 1. **Limpieza al nivel de las palabras** — quita muletillas, imprecisiones, vocabulario inflado, valoraciones vacías y clichés
 2. **Claridad al nivel de la oración** — convierte sustantivos derivados de verbos en verbos, rompe oraciones sobrecargadas, deshace las cadenas de «de», aprieta la disciplina del párrafo
@@ -26,11 +26,18 @@ La habilidad devuelve una versión editada con una lista de cambios y recomendac
 npx skills add iamursky/sokrati/tree/main/skills/abrevia
 ```
 
+### ChatGPT
+
+1. Descarga la carpeta `skills/abrevia` completa, incluidos `SKILL.md` y `references/`
+2. En la barra lateral de ChatGPT, abre **Plugins → Skills**
+3. Selecciona **Create → Upload from your computer** y sube la carpeta de la habilidad
+4. Espera a que ChatGPT termine de revisar la habilidad. Después, selecciónala con `@` o pide a ChatGPT que mejore un texto profesional
+
 ### Claude Desktop / Web
 
-1. Descarga [SKILL.md](SKILL.md)
+1. Descarga la carpeta `skills/abrevia` completa, incluidos [SKILL.md](SKILL.md) y `references/`
 2. Ve a **Customize → Skills → + → Upload a skill**
-3. Sube `SKILL.md`
+3. Sube la carpeta de la habilidad
 4. La habilidad se activa automáticamente: pide a Claude que quite la «paja» de un texto o que lo deje «más claro»
 
 ### Instalación manual para Claude Code
@@ -70,4 +77,4 @@ La habilidad se activa automáticamente cuando:
 
 ## Autoría
 
-Esta habilidad se inspira en **«Пиши, сокращай 2025»** de Maxim Iliajov y Liudmila Sárycheva. No es un producto oficial de los autores del libro y no reproduce el texto original. Las ideas y técnicas son de los autores; esta habilidad es una interpretación de esas ideas convertida en algoritmos para Claude. Si lees ruso y te gusta el libro, apoya a los autores comprándolo en el enlace de arriba.
+Esta habilidad se inspira en **«Пиши, сокращай 2025»** de Maxim Iliajov y Liudmila Sárycheva. No es un producto oficial de los autores del libro y no reproduce el texto original. Las ideas y técnicas son de los autores; esta habilidad las interpreta como un flujo de trabajo para un asistente de IA. Si lees ruso y te gusta el libro, apoya a los autores comprándolo en el enlace de arriba.

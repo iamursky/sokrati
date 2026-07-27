@@ -1,4 +1,4 @@
-# Sokrati — a Claude skill for editing business writing in plain, reader-first style
+# Sokrati: an agent skill for editing business writing in plain, reader-first style
 
 [![skills.sh](https://skills.sh/b/iamursky/sokrati)](https://skills.sh/iamursky/sokrati)
 
@@ -8,7 +8,7 @@ Inspired by **[«Пиши, сокращай 2025»](https://sokratil.ru/)** ("Wr
 
 ## What it does
 
-Hand Claude any piece of business writing — an email, a landing page, an "about" page, a press release, a resume, a report, a deck, a cold email — and the skill edits it across five levels:
+Give Claude, ChatGPT, or Codex a piece of business writing, such as an email, landing page, press release, resume, report, deck, or cold email. The skill edits it across five levels:
 
 1. **Word-level cleanup** — removes filler phrases, vague wording, inflated vocabulary, empty judgments, and clichés
 2. **Sentence-level clarity** — turns nominalizations into verbs, breaks up overloaded sentences, tightens paragraph discipline
@@ -22,15 +22,15 @@ The skill returns an edited version with a change log and recommendations for wh
 
 Each language has its own adapted version — native filler phrases, native clichés, native examples — not a translation.
 
-| Language  | Skill name | Folder                                |
-| --------- | ---------- | ------------------------------------- |
-| Русский   | `sokrati`  | [skills/sokrati/](skills/sokrati/)    |
-| English   | `shorten`  | [skills/shorten/](skills/shorten/)    |
-| Català    | `escurca`  | [skills/escurca/](skills/escurca/)    |
-| Deutsch   | `kuerzen`  | [skills/kuerzen/](skills/kuerzen/)    |
-| Español   | `abrevia`  | [skills/abrevia/](skills/abrevia/)    |
-| Français  | `abrege`   | [skills/abrege/](skills/abrege/)      |
-| Italiano  | `abbrevia` | [skills/abbrevia/](skills/abbrevia/)  |
+| Language | Skill name | Folder                               |
+| -------- | ---------- | ------------------------------------ |
+| Русский  | `sokrati`  | [skills/sokrati/](skills/sokrati/)   |
+| English  | `shorten`  | [skills/shorten/](skills/shorten/)   |
+| Català   | `escurca`  | [skills/escurca/](skills/escurca/)   |
+| Deutsch  | `kuerzen`  | [skills/kuerzen/](skills/kuerzen/)   |
+| Español  | `abrevia`  | [skills/abrevia/](skills/abrevia/)   |
+| Français | `abrege`   | [skills/abrege/](skills/abrege/)     |
+| Italiano | `abbrevia` | [skills/abbrevia/](skills/abbrevia/) |
 
 Each folder has its own `README.md`, `SKILL.md`, and `references/KNOWLEDGE.md`.
 
@@ -46,11 +46,18 @@ npx skills add iamursky/sokrati/tree/main/skills/shorten
 npx skills add iamursky/sokrati
 ```
 
+### ChatGPT
+
+1. Download the folder for your target language, including `SKILL.md` and `references/`
+2. In the ChatGPT sidebar, open **Plugins → Skills**
+3. Select **Create → Upload from your computer** and upload the skill folder
+4. Wait for ChatGPT to finish scanning the skill, then select it with `@` or ask ChatGPT to improve business writing in that language
+
 ### Claude Desktop / Web
 
-1. Download the `SKILL.md` from the folder of your target language
+1. Download the folder for your target language, including `SKILL.md` and `references/`
 2. Go to **Customize → Skills → + → Upload a skill**
-3. Upload `SKILL.md`
+3. Upload the skill folder
 4. The skill activates automatically when you ask Claude to clean up, tighten, or improve business writing in that language
 
 ### Manual install for Claude Code
@@ -71,13 +78,13 @@ Each language ships as a separate skill — you can install several side by side
 
 The skill triggers automatically when you:
 
-- Ask Claude to edit, review, clean up, or improve any business text
+- Ask Claude, ChatGPT, or Codex to edit, review, clean up, or improve any business text
 - Mention "information style", "infostyle", "Ilyahov", "Glavred", "filler words", or "bureaucratese" (or the local equivalents)
-- Ask Claude to cut the fluff, kill the clichés, or rewrite in "plain language"
+- Ask the assistant to cut the fluff, kill the clichés, or rewrite in "plain language"
 
 ## Authorship
 
-The skill is inspired by **«Пиши, сокращай 2025»** by Maxim Ilyahov and Lyudmila Sarycheva. It is not an official product of the book's authors and does not reproduce the original text. The ideas and techniques belong to the authors; this skill is one interpretation of those ideas as algorithms for Claude. If you read Russian and like the book, support the authors by buying it at the link above.
+The skill is inspired by **«Пиши, сокращай 2025»** by Maxim Ilyahov and Lyudmila Sarycheva. It is not an official product of the book's authors and does not reproduce the original text. The ideas and techniques belong to the authors; this skill is one interpretation of those ideas as an agent workflow. If you read Russian and like the book, support the authors by buying it at the link above.
 
 ## License
 

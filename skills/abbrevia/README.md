@@ -1,4 +1,4 @@
-# Abbrevia — uno skill di Claude per rivedere testi italiani in stile chiaro e centrato sul lettore
+# Abbrevia: uno skill per rivedere testi italiani in stile chiaro e centrato sul lettore
 
 ![Linee di testo grigio caotiche cadono in un imbuto arancione e ne escono come rettangoli arancioni ordinati e regolari, trasformando il disordine in testo strutturato](/.github/images/cover.webp)
 
@@ -8,7 +8,7 @@ Ispirato a **[«Пиши, сокращай 2025»](https://sokratil.ru/)** («Sc
 
 ## Cosa fa
 
-Passa a Claude un qualunque testo professionale in italiano — un'email, una landing page, una pagina «Chi siamo», un comunicato stampa, un curriculum, una relazione, una presentazione, un'email a freddo — e lo rivede su cinque livelli:
+Passa a Claude, ChatGPT o Codex un testo professionale in italiano, come un'email, una landing page, un comunicato stampa, un curriculum, una relazione, una presentazione o un'email a freddo. Lo skill lo rivede su cinque livelli:
 
 1. **Pulizia a livello di parola** — toglie riempitivi, vaghezza, vocabolario gonfiato, giudizi vuoti e cliché
 2. **Chiarezza a livello di frase** — trasforma nominalizzazioni in verbi, spezza le frasi sovraccariche, mette ordine nei paragrafi
@@ -26,11 +26,18 @@ Lo skill restituisce una versione rivista con il registro delle modifiche e i su
 npx skills add iamursky/sokrati/tree/main/skills/abbrevia
 ```
 
+### ChatGPT
+
+1. Scarica l'intera cartella `skills/abbrevia`, compresi `SKILL.md` e `references/`
+2. Nella barra laterale di ChatGPT, apri **Plugins → Skills**
+3. Seleziona **Create → Upload from your computer** e carica la cartella dello skill
+4. Attendi che ChatGPT completi la verifica. Poi seleziona lo skill con `@` o chiedi a ChatGPT di migliorare un testo professionale
+
 ### Claude Desktop / Web
 
-1. Scarica [SKILL.md](SKILL.md)
+1. Scarica l'intera cartella `skills/abbrevia`, compresi [SKILL.md](SKILL.md) e `references/`
 2. Vai su **Customize → Skills → + → Upload a skill**
-3. Carica `SKILL.md`
+3. Carica la cartella dello skill
 4. Lo skill si attiva automaticamente — chiedi a Claude di togliere la fuffa o di rendere il testo «più forte»
 
 ### Installazione manuale per Claude Code
@@ -49,7 +56,7 @@ ln -s .sokrati/skills/abbrevia .claude/skills/abbrevia
 
 Lo skill si attiva automaticamente quando:
 
-- Chiedi a Claude di rivedere, controllare, ripulire o migliorare un testo professionale in italiano
+- Chiedi a Claude, ChatGPT o Codex di rivedere, controllare, ripulire o migliorare un testo professionale in italiano
 - Menzioni «stile informativo», «infostyle», «Iljachov» (o «Ilyahov»), «Glavred», «parole vuote», «burocratese», «linguaggio amministrativo», «antilingua» o «aziendalese»
 - Chiedi di togliere la «fuffa» dal testo, di renderlo «più forte», «più asciutto» o «più diretto»
 - Chiedi di riscrivere qualcosa in «lingua semplice», «italiano chiaro» o «lingua umana»
@@ -70,4 +77,4 @@ Lo skill si attiva automaticamente quando:
 
 ## Crediti
 
-Lo skill è ispirato al libro **«Пиши, сокращай 2025»** di Maksim Iljachov e Ljudmila Sarycheva. Non è un prodotto ufficiale degli autori del libro e non riproduce il testo originale. Le idee e le tecniche appartengono agli autori; questo skill è una mia interpretazione di quelle idee sotto forma di algoritmi per Claude. Se leggi il russo e il libro ti piace, sostieni gli autori comprandolo al link qui sopra.
+Lo skill è ispirato al libro **«Пиши, сокращай 2025»** di Maksim Iljachov e Ljudmila Sarycheva. Non è un prodotto ufficiale degli autori del libro e non riproduce il testo originale. Le idee e le tecniche appartengono agli autori; questo skill le interpreta come un flusso di lavoro per un assistente IA. Se leggi il russo e il libro ti piace, sostieni gli autori comprandolo al link qui sopra.

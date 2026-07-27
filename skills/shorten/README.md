@@ -1,4 +1,4 @@
-# Shorten — a Claude skill for editing English business writing in a plain, reader-first style
+# Shorten: an agent skill for editing English business writing in a plain, reader-first style
 
 ![Chaotic gray lines of text fall into an orange funnel and emerge as neat, even orange rectangles, turning clutter into structured text](/.github/images/cover.webp)
 
@@ -8,7 +8,7 @@ Inspired by **[«Пиши, сокращай 2025»](https://sokratil.ru/)** ("Wr
 
 ## What it does
 
-Hand Claude any business writing in English — an email, a landing page, an "about" page, a press release, a resume, a report, a deck, or a cold email — and it edits across five levels:
+Give Claude, ChatGPT, or Codex a piece of business writing in English, such as an email, landing page, press release, resume, report, deck, or cold email. The skill edits it across five levels:
 
 1. **Word-level cleanup** — removes filler phrases, vague wording, inflated vocabulary, empty judgments, and clichés
 2. **Sentence-level clarity** — turns nominalizations into verbs, breaks up overloaded sentences, tightens paragraph discipline
@@ -26,11 +26,18 @@ The skill returns an edited version with a change log and recommendations for wh
 npx skills add iamursky/sokrati/tree/main/skills/shorten
 ```
 
+### ChatGPT
+
+1. Download the entire `skills/shorten` folder, including `SKILL.md` and `references/`
+2. In the ChatGPT sidebar, open **Plugins → Skills**
+3. Select **Create → Upload from your computer** and upload the skill folder
+4. Wait for ChatGPT to finish scanning the skill, then select it with `@` or ask ChatGPT to improve a piece of business writing
+
 ### Claude Desktop / Web
 
-1. Download [SKILL.md](SKILL.md)
+1. Download the entire `skills/shorten` folder, including [SKILL.md](SKILL.md) and `references/`
 2. Go to **Customize → Skills → + → Upload a skill**
-3. Upload `SKILL.md`
+3. Upload the skill folder
 4. The skill activates automatically — ask Claude to cut the fluff or make a text "stronger"
 
 ### Manual install for Claude Code
@@ -49,9 +56,9 @@ ln -s .sokrati/skills/shorten .claude/skills/shorten
 
 The skill triggers automatically when you:
 
-- Ask Claude to edit, review, clean up, or improve any business text in English
+- Ask Claude, ChatGPT, or Codex to edit, review, clean up, or improve any business text in English
 - Mention "information style", "infostyle", "Ilyahov", "Glavred", "filler words", or "bureaucratese"
-- Ask Claude to cut the fluff, kill the clichés, or rewrite in "plain language"
+- Ask the assistant to cut the fluff, kill the clichés, or rewrite in "plain language"
 
 ### Examples
 
@@ -69,4 +76,4 @@ The skill triggers automatically when you:
 
 ## Authorship
 
-The skill is inspired by **«Пиши, сокращай 2025»** by Maxim Ilyahov and Lyudmila Sarycheva. It is not an official product of the book's authors and does not reproduce the original text. The ideas and techniques belong to the authors; this skill is one interpretation of those ideas as algorithms for Claude. If you read Russian and like the book, support the authors by buying it at the link above.
+The skill is inspired by **«Пиши, сокращай 2025»** by Maxim Ilyahov and Lyudmila Sarycheva. It is not an official product of the book's authors and does not reproduce the original text. The ideas and techniques belong to the authors; this skill is one interpretation of those ideas as an agent workflow. If you read Russian and like the book, support the authors by buying it at the link above.

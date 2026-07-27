@@ -1,4 +1,4 @@
-# Abrège — un skill Claude pour éditer le français professionnel en style clair, centré sur le lecteur
+# Abrège: un skill pour éditer le français professionnel en style clair, centré sur le lecteur
 
 ![Des lignes de texte grises et désordonnées tombent dans un entonnoir orange et en ressortent en rectangles oranges nets et alignés, transformant le désordre en texte structuré](/.github/images/cover.webp)
 
@@ -8,7 +8,7 @@ Inspiré par **[«Пиши, сокращай 2025»](https://sokratil.ru/)** («
 
 ## Ce que ça fait
 
-Donnez à Claude n'importe quel texte professionnel en français — courriel, page d'accueil, page «À propos», communiqué de presse, CV, lettre de motivation, rapport, présentation, courriel de prospection à froid — et il l'édite sur cinq niveaux :
+Donnez à Claude, ChatGPT ou Codex un texte professionnel en français, par exemple un courriel, une page d'accueil, un communiqué de presse, un CV, un rapport, une présentation ou un courriel de prospection. Le skill l'édite sur cinq niveaux :
 
 1. **Nettoyage au niveau des mots** — coupe les formules de remplissage, le vague, le vocabulaire ampoulé, les jugements vides, les clichés et les anglicismes inutiles
 2. **Clarté au niveau des phrases** — transforme les nominalisations en verbes, casse les phrases interminables, remet de la discipline dans les paragraphes
@@ -26,11 +26,18 @@ Le skill renvoie une version éditée avec un journal des changements et des rec
 npx skills add iamursky/sokrati/tree/main/skills/abrege
 ```
 
+### ChatGPT
+
+1. Téléchargez le dossier `skills/abrege` complet, avec `SKILL.md` et `references/`
+2. Dans la barre latérale de ChatGPT, ouvrez **Plugins → Skills**
+3. Sélectionnez **Create → Upload from your computer**, puis téléversez le dossier du skill
+4. Attendez la fin de l'analyse par ChatGPT. Sélectionnez ensuite le skill avec `@` ou demandez à ChatGPT d'améliorer un texte professionnel
+
 ### Claude Desktop / Web
 
-1. Téléchargez [SKILL.md](SKILL.md)
+1. Téléchargez le dossier `skills/abrege` complet, avec [SKILL.md](SKILL.md) et `references/`
 2. Allez dans **Customize → Skills → + → Upload a skill**
-3. Téléversez `SKILL.md`
+3. Téléversez le dossier du skill
 4. Le skill se déclenche automatiquement — demandez à Claude de couper le gras, de virer la langue de bois ou de rendre un texte «plus fort»
 
 ### Installation manuelle pour Claude Code
@@ -49,9 +56,9 @@ ln -s .sokrati/skills/abrege .claude/skills/abrege
 
 Le skill se déclenche automatiquement quand vous :
 
-- Demandez à Claude de relire, corriger, alléger ou améliorer n'importe quel texte professionnel en français
+- Demandez à Claude, ChatGPT ou Codex de relire, corriger, alléger ou améliorer n'importe quel texte professionnel en français
 - Mentionnez «style informatif», «infostyle», «Iliakhov», «Glavred», «mots de remplissage», «langue de bois», «jargon administratif» ou «anglicismes inutiles»
-- Demandez à Claude de «couper le gras», «virer le bla-bla», «virer la langue de bois», ou d'écrire en «français normal»
+- Demandez à l'assistant de «couper le gras», «virer le bla-bla», «virer la langue de bois», ou d'écrire en «français normal»
 
 ### Exemples
 
@@ -69,4 +76,4 @@ Le skill se déclenche automatiquement quand vous :
 
 ## Paternité
 
-Le skill s'inspire de **«Пиши, сокращай 2025»** de Maxime Iliakhov et Lioudmila Saritcheva. Ce n'est pas un produit officiel des auteurs et il ne reproduit pas le texte original. Les idées et procédés appartiennent aux auteurs ; ce skill est une interprétation de ces idées sous forme d'algorithmes pour Claude. Si vous lisez le russe et que le livre vous plaît, soutenez les auteurs en l'achetant via le lien ci-dessus.
+Le skill s'inspire de **«Пиши, сокращай 2025»** de Maxime Iliakhov et Lioudmila Saritcheva. Ce n'est pas un produit officiel des auteurs et il ne reproduit pas le texte original. Les idées et procédés appartiennent aux auteurs ; ce skill les interprète comme un flux de travail pour un assistant IA. Si vous lisez le russe et que le livre vous plaît, soutenez les auteurs en l'achetant via le lien ci-dessus.
